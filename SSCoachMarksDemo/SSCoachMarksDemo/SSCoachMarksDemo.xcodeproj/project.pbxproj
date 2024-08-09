@@ -14,6 +14,21 @@
 		12B021D32C65E0740079A38E /* SSCoachMarksDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021D22C65E0740079A38E /* SSCoachMarksDemoTests.swift */; };
 		12B021DD2C65E0740079A38E /* SSCoachMarksDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021DC2C65E0740079A38E /* SSCoachMarksDemoUITests.swift */; };
 		12B021DF2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021DE2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift */; };
+		12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */; };
+		12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */; };
+		12B021FF2C65E7E80079A38E /* SSCoachMarkTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */; };
+		12B022002C65E7E80079A38E /* SSCoachMarkOverlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */; };
+		12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F32C65E7E70079A38E /* Color+Extension.swift */; };
+		12B022022C65E7E80079A38E /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F42C65E7E70079A38E /* View+Extension.swift */; };
+		12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F62C65E7E70079A38E /* CoachMarkView.swift */; };
+		12B022042C65E7E80079A38E /* SSCoachMarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */; };
+		12B022052C65E7E80079A38E /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F92C65E7E70079A38E /* PreferenceKey.swift */; };
+		12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FA2C65E7E70079A38E /* CommonModifier.swift */; };
+		12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FB2C65E7E70079A38E /* CommonFunctions.swift */; };
+		12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */; };
+		12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E6E2C6611D700B6970A /* EmailModel.swift */; };
+		12E58E712C66127600B6970A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E702C66127600B6970A /* SearchTextField.swift */; };
+		12E58E732C66129800B6970A /* EmailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E722C66129800B6970A /* EmailRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,21 @@
 		12B021D82C65E0740079A38E /* SSCoachMarksDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSCoachMarksDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B021DC2C65E0740079A38E /* SSCoachMarksDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoUITests.swift; sourceTree = "<group>"; };
 		12B021DE2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkButtonStyle.swift; sourceTree = "<group>"; };
+		12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarkModel.swift; sourceTree = "<group>"; };
+		12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkTextStyle.swift; sourceTree = "<group>"; };
+		12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkOverlayStyle.swift; sourceTree = "<group>"; };
+		12B021F32C65E7E70079A38E /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		12B021F42C65E7E70079A38E /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		12B021F62C65E7E70079A38E /* CoachMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarkView.swift; sourceTree = "<group>"; };
+		12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkManager.swift; sourceTree = "<group>"; };
+		12B021F92C65E7E70079A38E /* PreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
+		12B021FA2C65E7E70079A38E /* CommonModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonModifier.swift; sourceTree = "<group>"; };
+		12B021FB2C65E7E70079A38E /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkConfiguration.swift; sourceTree = "<group>"; };
+		12E58E6E2C6611D700B6970A /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
+		12E58E702C66127600B6970A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		12E58E722C66129800B6970A /* EmailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +104,7 @@
 		12B021B52C65E0730079A38E = {
 			isa = PBXGroup;
 			children = (
+				12B021EC2C65E7E70079A38E /* Sources */,
 				12B021C02C65E0730079A38E /* SSCoachMarksDemo */,
 				12B021D12C65E0740079A38E /* SSCoachMarksDemoTests */,
 				12B021DB2C65E0740079A38E /* SSCoachMarksDemoUITests */,
@@ -96,6 +127,9 @@
 			children = (
 				12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */,
 				12B021C32C65E0730079A38E /* ContentView.swift */,
+				12E58E722C66129800B6970A /* EmailRow.swift */,
+				12E58E702C66127600B6970A /* SearchTextField.swift */,
+				12E58E6E2C6611D700B6970A /* EmailModel.swift */,
 				12B021C52C65E0740079A38E /* Assets.xcassets */,
 				12B021C72C65E0740079A38E /* Preview Content */,
 			);
@@ -125,6 +159,57 @@
 				12B021DE2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift */,
 			);
 			path = SSCoachMarksDemoUITests;
+			sourceTree = "<group>";
+		};
+		12B021EC2C65E7E70079A38E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				12B021ED2C65E7E70079A38E /* Models */,
+				12B021F22C65E7E70079A38E /* Extensions */,
+				12B021F52C65E7E70079A38E /* Views */,
+				12B021F72C65E7E70079A38E /* Helpers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		12B021ED2C65E7E70079A38E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */,
+				12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */,
+				12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */,
+				12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12B021F22C65E7E70079A38E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12B021F32C65E7E70079A38E /* Color+Extension.swift */,
+				12B021F42C65E7E70079A38E /* View+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		12B021F52C65E7E70079A38E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12B021F62C65E7E70079A38E /* CoachMarkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12B021F72C65E7E70079A38E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */,
+				12B021F92C65E7E70079A38E /* PreferenceKey.swift */,
+				12B021FA2C65E7E70079A38E /* CommonModifier.swift */,
+				12B021FB2C65E7E70079A38E /* CommonFunctions.swift */,
+				12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +342,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12B022002C65E7E80079A38E /* SSCoachMarkOverlayStyle.swift in Sources */,
+				12B022052C65E7E80079A38E /* PreferenceKey.swift in Sources */,
+				12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */,
+				12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */,
+				12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */,
+				12B022022C65E7E80079A38E /* View+Extension.swift in Sources */,
+				12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */,
+				12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */,
+				12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */,
+				12B021FF2C65E7E80079A38E /* SSCoachMarkTextStyle.swift in Sources */,
+				12E58E732C66129800B6970A /* EmailRow.swift in Sources */,
 				12B021C42C65E0730079A38E /* ContentView.swift in Sources */,
 				12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */,
+				12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */,
+				12B022042C65E7E80079A38E /* SSCoachMarkManager.swift in Sources */,
+				12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */,
+				12E58E712C66127600B6970A /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +530,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +560,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
