@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */; };
 		12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */; };
 		12B021C42C65E0730079A38E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021C32C65E0730079A38E /* ContentView.swift */; };
 		12B021C62C65E0740079A38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B021C52C65E0740079A38E /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
 		12B021BE2C65E0730079A38E /* SSCoachMarksDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSCoachMarksDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoApp.swift; sourceTree = "<group>"; };
 		12B021C32C65E0730079A38E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1223C3772C69EF0A0005329C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		12B021B52C65E0730079A38E = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		12B021EC2C65E7E70079A38E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				1223C3772C69EF0A0005329C /* ViewModel */,
 				12B021ED2C65E7E70079A38E /* Models */,
 				12B021F22C65E7E70079A38E /* Extensions */,
 				12B021F52C65E7E70079A38E /* Views */,
@@ -348,6 +359,7 @@
 				12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */,
 				12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */,
 				12B022022C65E7E80079A38E /* View+Extension.swift in Sources */,
+				1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */,
 				12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */,
 				12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */,
 				12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */,

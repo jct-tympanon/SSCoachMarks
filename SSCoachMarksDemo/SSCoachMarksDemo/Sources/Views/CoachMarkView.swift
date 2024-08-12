@@ -36,38 +36,43 @@ struct CoachMarkView: ViewModifier {
         }
     }
     
+    /// This property is marked with `@ObservedObject` to ensure that any changes in the view model are observed and reflected in the associated SwiftUI views. It tracks the visibility of the Coach Mark, the current highlighted item, and handles the logic for navigating through the Coach Mark sequence.
+    @ObservedObject var coachMarkViewModel: CoachMarkViewModel
+    
+    /// This property allows you to customize the appearance and behaviour of the "Skip" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
+    public var skipCoachMarkButton: AnyView?
+    
+    /// This property allows you to customize the appearance and behavior of the "Next" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
+    public var nextButtonContent: AnyView?
+    
+    /// This property allows you to customize the appearance and behavior of the "Back" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
+    public var backButtonContent: AnyView?
+    
+    /// This property allows you to customize the appearance and behavior of the "Done" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
+    public var doneButtonContent: AnyView?
+    
     /// A closure that is called when the coach mark sequence finishes.
     public var onCoachMarkFinished: () -> ()
     
-    /// A boolean indicating the current state of the coach mark visibility.
-    @State private var showCoachMark: Bool = false
-    
     /// An array of integers representing the order in which highlights are displayed.
     @State private var highlightOrder: [Int] = []
-    
-    /// An integer representing the index of the currently displayed highlight.
-    @State private var currentHighlight: Int = 0
-    
-    /// A boolean indicating whether the coach mark should be hidden.
-    @State private var hideCoachMark: Bool = true
     
     /// A timer that can be used to control the duration and interval of automatic transitions between coach marks.
     @State private var timer: Timer?
     
     /// The height of the text description within the coach mark, used for layout purposes.
     @State private var descriptionTextHeight: CGFloat = 0
-    
-    /// The width of the custom view within the coach mark, used for layout purposes.
-    @State private var customViewWidth: CGFloat = 0
-    
+
     func body(content: Content) -> some View {
         content
             .onPreferenceChange(HighlightAnchorKey.self) { value in
                 highlightOrder = Array(value.keys).sorted()
             }
             .overlayPreferenceValue(HighlightAnchorKey.self) { preference in
-                if highlightOrder.indices.contains(currentHighlight), isShowCoachMark, hideCoachMark {
-                    if let highlight = preference[highlightOrder[currentHighlight]] {
+                if highlightOrder.indices.contains(coachMarkViewModel.currentHighlight),
+                   isShowCoachMark,
+                   coachMarkViewModel.hideCoachMark {
+                    if let highlight = preference[highlightOrder[coachMarkViewModel.currentHighlight]] {
                         HighlightView(highlight: highlight)
                     }
                 }
@@ -104,27 +109,33 @@ struct CoachMarkView: ViewModifier {
                 .ignoresSafeArea()
                 .onAppear {
                     updateAfterDelay(delay: 0.1) {
-                        showCoachMark = true
+                        coachMarkViewModel.showCoachMark = true
                     }
-                    
+                    coachMarkViewModel.onCoachMarkFinished = onCoachMarkFinished
                     if isAutoTransition {
                         startTimer()
                     }
                 }
                 .modify {
                     if #available(iOS 17.0, *) {
-                        $0.onChange(of: currentHighlight) { _, _ in
+                        $0.onChange(of: coachMarkViewModel.currentHighlight) { _, _ in
+                            if !isAutoTransition {
+                                coachMarkViewModel.onCoachMarkFinished = onCoachMarkFinished
+                            }
                             if isAutoTransition {
                                 startTimer()
-                            } else if currentHighlight >= highlightOrder.count - 1 && isAutoTransition {
+                            } else if coachMarkViewModel.currentHighlight >= highlightOrder.count - 1 && isAutoTransition {
                                 stopTimer()
                             }
                         }
                     } else {
-                        $0.onChange(of: currentHighlight) { _ in
+                        $0.onChange(of: coachMarkViewModel.currentHighlight) { _ in
+                            if !isAutoTransition {
+                                coachMarkViewModel.onCoachMarkFinished = onCoachMarkFinished
+                            }
                             if isAutoTransition {
                                 startTimer()
-                            } else if currentHighlight >= highlightOrder.count - 1 && isAutoTransition {
+                            } else if coachMarkViewModel.currentHighlight >= highlightOrder.count - 1 && isAutoTransition {
                                 stopTimer()
                             }
                         }
@@ -137,7 +148,7 @@ struct CoachMarkView: ViewModifier {
                 .foregroundColor(.clear)
                 .frame(width: highlightRect.width + 20, height: highlightRect.height + 20)
                 .clipShape(RoundedRectangle(cornerRadius: highlight.highlightViewCornerRadius, style: .circular))
-                .popover(isPresented: $showCoachMark) {
+                .popover(isPresented: $coachMarkViewModel.showCoachMark) {
                     popover(highlight: highlight, highlightRect: highlightRect)
                         .onAppear {
                             DispatchQueue.main.async {
@@ -156,7 +167,7 @@ struct CoachMarkView: ViewModifier {
                         }
                 }
                 .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
-                .allowsHitTesting(!showCoachMark)
+                .allowsHitTesting(!coachMarkViewModel.showCoachMark)
         }
     }
     
@@ -167,19 +178,10 @@ struct CoachMarkView: ViewModifier {
         stopTimer()
         timer = Timer.scheduledTimer(withTimeInterval: autoTransitionDuration, repeats: false) { _ in
             withAnimation {
-                if currentHighlight >= highlightOrder.count - 1 {
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        hideCoachMark = false
-                    }
-                    onCoachMarkFinished()
+                if coachMarkViewModel.currentHighlight >= highlightOrder.count - 1 {
+                    coachMarkViewModel.finishCoachMark()
                 } else {
-                    withAnimation(.easeOut(duration: 0.2)) {
-                        showCoachMark = false
-                        currentHighlight += 1
-                    }
-                    updateAfterDelay(delay:  0.6) {
-                        showCoachMark = true
-                    }
+                    coachMarkViewModel.nextButtonAction()
                 }
             }
         }
@@ -233,14 +235,26 @@ struct CoachMarkView: ViewModifier {
             
             if !isAutoTransition {
                 HStack {
-                    if !(currentHighlight == 0) {
-                        backButtonView
+                    if !(coachMarkViewModel.currentHighlight == 0) {
+                        if let backButtonContent = backButtonContent {
+                            backButtonContent
+                        } else {
+                            backButtonView
+                        }
                     }
                     
-                    if currentHighlight >= highlightOrder.count - 1 {
-                        doneButtonView
+                    if coachMarkViewModel.currentHighlight >= highlightOrder.count - 1 {
+                        if let doneButtonContent = doneButtonContent {
+                            doneButtonContent
+                        } else {
+                            doneButtonView
+                        }
                     } else {
-                        nextButtonView
+                        if let nextButtonContent = nextButtonContent {
+                            nextButtonContent
+                        } else {
+                            nextButtonView
+                        }
                     }
                 }
                 .padding(10)
@@ -275,21 +289,23 @@ struct CoachMarkView: ViewModifier {
             VStack {
                 Spacer()
                 HStack {
-                    Button(action: {
-                        withAnimation(.easeInOut(duration: 0.25)) {
-                            hideCoachMark = false
-                        }
-                        onCoachMarkFinished()
-                    }, label: {
-                        Text(configuration.skipCoachMarkButtonStyle.buttonText)
-                            .tint(configuration.skipCoachMarkButtonStyle.foregroundStyle)
-                            .font(customSkipCoachMarkFont)
-                            .padding(15)
-                            .bold()
-                            .background(configuration.skipCoachMarkButtonStyle.backgroundColor)
-                            .cornerRadius(25)
+                    if let skipButton = skipCoachMarkButton {
+                        skipButton
                             .padding(.leading, 20)
-                    })
+                    } else {
+                        Button(action: {
+                            coachMarkViewModel.skipCoachMark()
+                        }, label: {
+                            Text(configuration.skipCoachMarkButtonStyle.buttonText)
+                                .tint(configuration.skipCoachMarkButtonStyle.foregroundStyle)
+                                .font(customSkipCoachMarkFont)
+                                .padding(15)
+                                .bold()
+                                .background(configuration.skipCoachMarkButtonStyle.backgroundColor)
+                                .cornerRadius(25)
+                                .padding(.leading, 20)
+                        })
+                    }
                     Spacer()
                 }
             }
@@ -340,13 +356,7 @@ struct CoachMarkView: ViewModifier {
                                            fontWeight: configuration.backButtonStyle.fontWeight)
         
         return Button(action: {
-            withAnimation(.easeOut(duration: 0.25)) {
-                showCoachMark = false
-                currentHighlight -= 1
-            }
-            updateAfterDelay(delay:  0.6) {
-                showCoachMark = true
-            }
+            coachMarkViewModel.backButtonAction()
         }) {
             Text(configuration.backButtonStyle.buttonText)
                 .unFilledButtonTextModifier(foregroundStyle: configuration.backButtonStyle.foregroundStyle, font: customBackFont)
@@ -367,13 +377,7 @@ struct CoachMarkView: ViewModifier {
                                            fontWeight: configuration.nextButtonStyle.fontWeight)
         
         return Button(action: {
-            withAnimation(.easeOut(duration: 0.2)) {
-                showCoachMark = false
-                currentHighlight += 1
-            }
-            updateAfterDelay(delay:  0.6) {
-                showCoachMark = true
-            }
+            coachMarkViewModel.nextButtonAction()
         }) {
             Text(configuration.nextButtonStyle.buttonText)
                 .filledButtonTextModifier(foregroundStyle: configuration.nextButtonStyle.foregroundStyle, font: customNextFont)
@@ -396,10 +400,7 @@ struct CoachMarkView: ViewModifier {
                                            fontWeight: configuration.doneButtonStyle.fontWeight)
         
         return Button(action: {
-            withAnimation(.easeInOut(duration: 0.2)) {
-                hideCoachMark = false
-            }
-            onCoachMarkFinished()
+            coachMarkViewModel.doneButtonAction()
         }) {
             Text(configuration.doneButtonStyle.buttonText)
                 .filledButtonTextModifier(foregroundStyle: configuration.doneButtonStyle.foregroundStyle, font: customDoneFont)
