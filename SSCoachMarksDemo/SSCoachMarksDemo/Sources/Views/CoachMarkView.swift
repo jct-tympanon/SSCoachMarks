@@ -148,26 +148,36 @@ struct CoachMarkView: ViewModifier {
                 .foregroundColor(.clear)
                 .frame(width: highlightRect.width + 20, height: highlightRect.height + 20)
                 .clipShape(RoundedRectangle(cornerRadius: highlight.highlightViewCornerRadius, style: .circular))
-                .popover(isPresented: $coachMarkViewModel.showCoachMark) {
-                    popover(highlight: highlight, highlightRect: highlightRect)
-                        .onAppear {
-                            DispatchQueue.main.async {
-                                if let keyWindow = UIApplication.shared.connectedScenes
-                                    .compactMap({ $0 as? UIWindowScene })
-                                    .flatMap({ $0.windows })
-                                    .first(where: { $0.isKeyWindow }) {
-                                    
-                                    if let uiVisualEffectContentView = keyWindow.findUIVisualEffectContentView() {
-                                        uiVisualEffectContentView.backgroundColor = UIColor(highlight.coachMarkBackGroundColor)
-                                    } else {
-                                        print("uiVisualEffectContentView view not found")
+                .modify {
+                    let popoverContent = {
+                        popover(highlight: highlight, highlightRect: highlightRect)
+                            .onAppear {
+                                DispatchQueue.main.async {
+                                    if let keyWindow = UIApplication.shared.connectedScenes
+                                        .compactMap({ $0 as? UIWindowScene })
+                                        .flatMap({ $0.windows })
+                                        .first(where: { $0.isKeyWindow }) {
+                                        
+                                        if let uiVisualEffectContentView = keyWindow.findUIVisualEffectContentView() {
+                                            uiVisualEffectContentView.backgroundColor = UIColor(highlight.coachMarkBackGroundColor)
+                                        } else {
+                                            print("uiVisualEffectContentView view not found")
+                                        }
                                     }
                                 }
                             }
-                        }
+                    }
+                    
+                    if #available(iOS 18.0, *) {
+                        $0.popover(isPresented: $coachMarkViewModel.showCoachMark, content: popoverContent)
+                            .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
+                            .allowsHitTesting(!coachMarkViewModel.showCoachMark)
+                    } else {
+                        $0.popover(isPresented: $coachMarkViewModel.showCoachMark, content: popoverContent)
+                            .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
+                            .allowsHitTesting(!coachMarkViewModel.showCoachMark)
+                    }
                 }
-                .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
-                .allowsHitTesting(!coachMarkViewModel.showCoachMark)
         }
     }
     
