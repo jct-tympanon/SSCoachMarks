@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    // MARK: - Variables
+    @StateObject var coachMarkViewModel = CoachMarkViewModel()
+    
     var body: some View {
         ZStack {
             VStack {
@@ -51,9 +54,24 @@ struct ContentView: View {
                 }
             }
         }
+        
+        
         // This modifier needs to be added to the main parent view to start the coach mark sequence.
         .modifier(CoachMarkView(isShowCoachMark: true,
-                                isAutoTransition: false,
+                                isAutoTransition: true,
+                                coachMarkViewModel: coachMarkViewModel,
+                                skipCoachMarkButton: AnyView(
+                                    skipButtonView(coachMarkViewModel: coachMarkViewModel)
+                                ),
+                                nextButtonContent: AnyView(
+                                    nextButtonView(coachMarkViewModel: coachMarkViewModel)
+                                ),
+                                backButtonContent: AnyView(
+                                    backButtonView(coachMarkViewModel: coachMarkViewModel)
+                                ),
+                                doneButtonContent: AnyView(
+                                    doneButtonView(coachMarkViewModel: coachMarkViewModel)
+                                ),
                                 onCoachMarkFinished: {
             print("Finished...")
         })
@@ -69,6 +87,84 @@ struct ContentView: View {
                    .doneButtonStyle(foregroundStyle: .black, backgroundColor: .green, fontSize: 12, fontWeight: .bold)
                    .skipCoachMarkButtonStyle(buttonText: "Skip", foregroundStyle: .black, backgroundColor: .green, fontSize: 12, fontWeight: .bold) */ )
     }
+    
+    // MARK: - Private Views
+    private struct skipButtonView: View {
+        
+        @ObservedObject var coachMarkViewModel: CoachMarkViewModel
+        
+        var body: some View {
+            Button(action: {
+                coachMarkViewModel.skipCoachMark()
+            }) {
+                Text("Skip")
+                    .foregroundColor(.white)
+                    .frame(width: 50, height: 24)
+                    .padding()
+                    .background(Color("customBackgroundColor"))
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+            }
+        }
+    }
+    
+    private struct nextButtonView: View {
+        
+        @ObservedObject var coachMarkViewModel: CoachMarkViewModel
+        
+        var body: some View {
+            Button(action: {
+                coachMarkViewModel.nextButtonAction()
+            }) {
+                Image(systemName: "arrow.forward")
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .padding()
+                    .background(Color("customBackgroundColor"))
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+            }
+        }
+    }
+    
+    private struct backButtonView: View {
+        
+        @ObservedObject var coachMarkViewModel: CoachMarkViewModel
+        
+        var body: some View {
+            Button(action: {
+                coachMarkViewModel.backButtonAction()
+            }) {
+                Image(systemName: "arrow.backward")
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .padding()
+                    .background(Color("customBackgroundColor"))
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+            }
+        }
+    }
+    
+    private struct doneButtonView: View {
+        
+        @ObservedObject var coachMarkViewModel: CoachMarkViewModel
+        
+        var body: some View {
+            Button(action: {
+                coachMarkViewModel.doneButtonAction()
+            }) {
+                Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .frame(width: 24, height: 24)
+                    .padding()
+                    .background(Color("customBackgroundColor"))
+                    .cornerRadius(30)
+                    .shadow(radius: 10)
+            }
+        }
+    }
+    
 }
 
 #Preview {
