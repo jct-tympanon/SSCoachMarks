@@ -19,7 +19,7 @@ struct Email: Identifiable {
     
 }
 
-// Sample data
+// Sample data for demo example
 let sampleEmails: [Email] = [
     Email(senderName: "John Doe", senderEmail: "john.doe@example.com", snippet: "Don't forget about our meeting tomorrow at 10 AM.", date: "Jul 6", avatar: "person.circle"),
     Email(senderName: "Jane Smith", senderEmail: "jane.smith@example.com", snippet: "Would you like to grab lunch tomorrow?", date: "Jul 5", avatar: "person.circle.fill"),

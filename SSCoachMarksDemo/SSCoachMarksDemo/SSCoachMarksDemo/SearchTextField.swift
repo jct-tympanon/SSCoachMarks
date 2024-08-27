@@ -27,7 +27,6 @@ struct SearchTextField: View {
 
                 .padding(.leading, 8)
 
-
                 TextField("Search...", text: $searchText)
                     .padding(8)
                     .cornerRadius(8)
