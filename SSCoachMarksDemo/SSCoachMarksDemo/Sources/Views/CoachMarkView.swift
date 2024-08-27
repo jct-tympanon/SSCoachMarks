@@ -19,7 +19,7 @@ struct CoachMarkView: ViewModifier {
     public var isAutoTransition: Bool = false
     
     /// The duration (in seconds) for each automatic transition between coach marks. Default is 2.0 sec.
-    public var autoTransitionDuration: Double = 2.0
+    public var autoTransitionDuration: Double = Constants.defaultAutoTransitionDuration
     
     /// An instance of `SSCoachMarkManager` that manages the CoachMark configuration and behaviour.
     public var coachMarkManager: SSCoachMarkManager = SSCoachMarkManager()
@@ -98,17 +98,17 @@ struct CoachMarkView: ViewModifier {
             
             Rectangle()
                 .fill(configuration.overlayStyle.overlayColor.opacity(configuration.overlayStyle.overlayOpacity))
-                .frame(width: screenSize.width + 500, height: screenSize.height + 500)
+                .frame(width: screenSize.width + Constants.highlightViewOverlayScreenSize, height: screenSize.height + Constants.highlightViewOverlayScreenSize)
                 .reverseMask {
                     Rectangle()
-                        .frame(width: highlightRect.width + 5, height: highlightRect.height + 5)
+                        .frame(width: highlightRect.width + Constants.highlightViewReverseMaskSpacing, height: highlightRect.height + Constants.highlightViewReverseMaskSpacing)
                         .clipShape(RoundedRectangle(cornerRadius: highlight.highlightViewCornerRadius, style: .circular))
                         .scaleEffect(highlight.scaleEffect)
-                        .offset(x: highlightRect.minX - 2.5, y: highlightRect.minY + safeArea.top - 2.5)
+                        .offset(x: highlightRect.minX - Constants.highlightViewReverseMaskOffSet, y: highlightRect.minY + safeArea.top - Constants.highlightViewReverseMaskOffSet)
                 }
                 .ignoresSafeArea()
                 .onAppear {
-                    updateAfterDelay(delay: 0.1) {
+                    updateAfterDelay(delay: Constants.showCoachMarkViewInitialDelay) {
                         coachMarkViewModel.showCoachMark = true
                     }
                     coachMarkViewModel.onCoachMarkFinished = onCoachMarkFinished
@@ -146,7 +146,7 @@ struct CoachMarkView: ViewModifier {
             
             Rectangle()
                 .foregroundColor(.clear)
-                .frame(width: highlightRect.width + 20, height: highlightRect.height + 20)
+                .frame(width: highlightRect.width + Constants.highlightViewClearColorSpacing, height: highlightRect.height + Constants.highlightViewClearColorSpacing)
                 .clipShape(RoundedRectangle(cornerRadius: highlight.highlightViewCornerRadius, style: .circular))
                 .modify {
                     let popoverContent = {
@@ -170,11 +170,11 @@ struct CoachMarkView: ViewModifier {
                     
                     if #available(iOS 18.0, *) {
                         $0.popover(isPresented: $coachMarkViewModel.showCoachMark, content: popoverContent)
-                            .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
+                            .offset(x: highlightRect.minX - Constants.popOverOffset, y: highlightRect.minY - Constants.popOverOffset)
                             .allowsHitTesting(!coachMarkViewModel.showCoachMark)
                     } else {
                         $0.popover(isPresented: $coachMarkViewModel.showCoachMark, content: popoverContent)
-                            .offset(x: highlightRect.minX - 10, y: highlightRect.minY - 10)
+                            .offset(x: highlightRect.minX - Constants.popOverOffset, y: highlightRect.minY - Constants.popOverOffset)
                             .allowsHitTesting(!coachMarkViewModel.showCoachMark)
                     }
                 }
@@ -222,7 +222,7 @@ struct CoachMarkView: ViewModifier {
                         .padding(.top, highlight.title == nil ? 0 : 20)
                         .foregroundStyle(configuration.coachMarkTitleViewStyle.foregroundStyle)
                     
-                    if descriptionTextHeight > UIScreen.main.bounds.height - highlightRect.maxY - 100 || descriptionTextHeight > UIScreen.main.bounds.height {
+                    if descriptionTextHeight > UIScreen.main.bounds.height - highlightRect.maxY - Constants.scrollViewOffset || descriptionTextHeight > UIScreen.main.bounds.height {
                         ScrollView {
                             coachMarkDescriptionView(description: description)
                         }

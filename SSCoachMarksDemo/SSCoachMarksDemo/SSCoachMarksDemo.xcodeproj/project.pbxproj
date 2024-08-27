@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */; };
+		125746A22C7623B300E869EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125746A12C7623B300E869EE /* Constants.swift */; };
 		129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461EE2C6CB215008BB44E /* DefaultStyleView.swift */; };
 		129461F12C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */; };
 		129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F22C6CB5B6008BB44E /* CommonView.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
+		125746A12C7623B300E869EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		129461EE2C6CB215008BB44E /* DefaultStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleView.swift; sourceTree = "<group>"; };
 		129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleWithCustomizationView.swift; sourceTree = "<group>"; };
 		129461F22C6CB5B6008BB44E /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		12B021F72C65E7E70079A38E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				125746A12C7623B300E869EE /* Constants.swift */,
 				12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */,
 				12B021F92C65E7E70079A38E /* PreferenceKey.swift */,
 				12B021FA2C65E7E70079A38E /* CommonModifier.swift */,
@@ -391,6 +394,7 @@
 				129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */,
 				12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */,
 				12E58E712C66127600B6970A /* SearchTextField.swift in Sources */,
+				125746A22C7623B300E869EE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
