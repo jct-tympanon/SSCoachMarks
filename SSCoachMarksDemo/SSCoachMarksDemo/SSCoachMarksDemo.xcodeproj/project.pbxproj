@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */; };
+		129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461EE2C6CB215008BB44E /* DefaultStyleView.swift */; };
+		129461F12C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */; };
+		129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F22C6CB5B6008BB44E /* CommonView.swift */; };
 		12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */; };
 		12B021C42C65E0730079A38E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021C32C65E0730079A38E /* ContentView.swift */; };
 		12B021C62C65E0740079A38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B021C52C65E0740079A38E /* Assets.xcassets */; };
@@ -27,6 +30,8 @@
 		12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FA2C65E7E70079A38E /* CommonModifier.swift */; };
 		12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FB2C65E7E70079A38E /* CommonFunctions.swift */; };
 		12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */; };
+		12CFB8BF2C6B413400E0B49A /* AutoTransitionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */; };
+		12CFB8C12C6B5A8E00E0B49A /* CustomButtonsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */; };
 		12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E6E2C6611D700B6970A /* EmailModel.swift */; };
 		12E58E712C66127600B6970A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E702C66127600B6970A /* SearchTextField.swift */; };
 		12E58E732C66129800B6970A /* EmailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E722C66129800B6970A /* EmailRow.swift */; };
@@ -51,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
+		129461EE2C6CB215008BB44E /* DefaultStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleView.swift; sourceTree = "<group>"; };
+		129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleWithCustomizationView.swift; sourceTree = "<group>"; };
+		129461F22C6CB5B6008BB44E /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		12B021BE2C65E0730079A38E /* SSCoachMarksDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSCoachMarksDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoApp.swift; sourceTree = "<group>"; };
 		12B021C32C65E0730079A38E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		12B021FA2C65E7E70079A38E /* CommonModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonModifier.swift; sourceTree = "<group>"; };
 		12B021FB2C65E7E70079A38E /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkConfiguration.swift; sourceTree = "<group>"; };
+		12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTransitionExample.swift; sourceTree = "<group>"; };
+		12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsExampleView.swift; sourceTree = "<group>"; };
 		12E58E6E2C6611D700B6970A /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
 		12E58E702C66127600B6970A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		12E58E722C66129800B6970A /* EmailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRow.swift; sourceTree = "<group>"; };
@@ -137,6 +147,11 @@
 			children = (
 				12B021C12C65E0730079A38E /* SSCoachMarksDemoApp.swift */,
 				12B021C32C65E0730079A38E /* ContentView.swift */,
+				129461F22C6CB5B6008BB44E /* CommonView.swift */,
+				12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */,
+				12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */,
+				129461EE2C6CB215008BB44E /* DefaultStyleView.swift */,
+				129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */,
 				12E58E722C66129800B6970A /* EmailRow.swift */,
 				12E58E702C66127600B6970A /* SearchTextField.swift */,
 				12E58E6E2C6611D700B6970A /* EmailModel.swift */,
@@ -357,9 +372,12 @@
 				12B022052C65E7E80079A38E /* PreferenceKey.swift in Sources */,
 				12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */,
 				12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */,
+				129461F12C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift in Sources */,
 				12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */,
 				12B022022C65E7E80079A38E /* View+Extension.swift in Sources */,
+				12CFB8C12C6B5A8E00E0B49A /* CustomButtonsExampleView.swift in Sources */,
 				1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */,
+				12CFB8BF2C6B413400E0B49A /* AutoTransitionExample.swift in Sources */,
 				12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */,
 				12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */,
 				12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */,
@@ -368,7 +386,9 @@
 				12B021C42C65E0730079A38E /* ContentView.swift in Sources */,
 				12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */,
 				12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */,
+				129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */,
 				12B022042C65E7E80079A38E /* SSCoachMarkManager.swift in Sources */,
+				129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */,
 				12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */,
 				12E58E712C66127600B6970A /* SearchTextField.swift in Sources */,
 			);

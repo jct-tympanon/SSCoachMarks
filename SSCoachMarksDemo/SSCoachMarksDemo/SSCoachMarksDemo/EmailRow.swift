@@ -29,7 +29,6 @@ struct EmailRow: View {
                     }
                     .padding(.horizontal, 10)
 
-
                 VStack(alignment: .leading, spacing: 4) {
                     Text(email.senderName)
                         .font(.headline)
