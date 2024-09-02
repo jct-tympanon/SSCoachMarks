@@ -56,11 +56,11 @@ public class CoachMarkViewModel: ObservableObject {
     ///
     /// The delay and animation duration are hardcoded in the function.
     public func nextButtonAction() {
-        withAnimation(.easeOut(duration: 0.2)) {
+        withAnimation(.easeOut(duration: Constants.buttonClickedAnimationDelay)) {
             showCoachMark = false
             currentHighlight += 1
         }
-        updateAfterDelay(delay:  0.6) {
+        updateAfterDelay(delay: Constants.showCoachMarkViewDelay) {
             self.showCoachMark = true
         }
     }
@@ -76,11 +76,11 @@ public class CoachMarkViewModel: ObservableObject {
     ///
     /// The delay and animation duration are hardcoded in the function.
     public func backButtonAction() {
-        withAnimation(.easeOut(duration: 0.25)) {
+        withAnimation(.easeOut(duration: Constants.buttonClickedAnimationDelay)) {
             showCoachMark = false
             currentHighlight -= 1
         }
-        updateAfterDelay(delay:  0.6) {
+        updateAfterDelay(delay: Constants.showCoachMarkViewDelay) {
             self.showCoachMark = true
         }
     }
@@ -105,7 +105,7 @@ public class CoachMarkViewModel: ObservableObject {
     ///
     /// The animation duration is hardcoded in the function.
     public func finishCoachMark() {
-        withAnimation(.easeInOut(duration: 0.25)) {
+        withAnimation(.easeInOut(duration: Constants.buttonClickedAnimationDelay)) {
             hideCoachMark = false
         }
         onCoachMarkFinished()
