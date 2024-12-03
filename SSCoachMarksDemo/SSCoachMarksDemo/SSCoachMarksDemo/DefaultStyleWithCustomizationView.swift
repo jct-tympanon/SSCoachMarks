@@ -27,7 +27,7 @@ struct DefaultStyleWithCustomizationView: View {
             .nextButtonStyle(foregroundStyle: .black, backgroundColor: .green, fontSize: 14, fontWeight: .bold)
             .backButtonStyle(foregroundStyle: .black, backgroundColor: .green, fontSize: 14, fontWeight: .bold)
             .doneButtonStyle(foregroundStyle: .black, backgroundColor: .green, fontSize: 14, fontWeight: .bold)
-            .skipCoachMarkButtonStyle(buttonText: "Skip Coach Mark", foregroundStyle: .black, backgroundColor: .green, fontSize: 16, fontWeight: .bold))
+            .skipCoachMarkButtonStyle(foregroundStyle: .black, backgroundColor: .green, fontSize: 14, fontWeight: .bold))
     }
 }
 

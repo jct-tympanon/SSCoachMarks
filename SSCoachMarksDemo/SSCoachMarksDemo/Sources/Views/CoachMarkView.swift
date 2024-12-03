@@ -141,9 +141,7 @@ struct CoachMarkView: ViewModifier {
                         }
                     }
                 }
-            
-            skipButton
-            
+                        
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: highlightRect.width + Constants.highlightViewClearColorSpacing, height: highlightRect.height + Constants.highlightViewClearColorSpacing)
@@ -260,6 +258,14 @@ struct CoachMarkView: ViewModifier {
                             doneButtonView
                         }
                     } else {
+                        if (coachMarkViewModel.currentHighlight == 0) {
+                            if let skipCoachMarkButton = skipCoachMarkButton {
+                                skipCoachMarkButton
+                            } else {
+                                skipButtonView
+                            }
+                        }
+                        
                         if let nextButtonContent = nextButtonContent {
                             nextButtonContent
                         } else {
@@ -393,6 +399,27 @@ struct CoachMarkView: ViewModifier {
                 .filledButtonTextModifier(foregroundStyle: configuration.nextButtonStyle.foregroundStyle, font: customNextFont)
         }
         .background(configuration.nextButtonStyle.backgroundColor)
+        .cornerRadius(10)
+    }
+    
+    /// Creates a view representing a "Skip" button in the UI.
+    ///
+    /// This button is styled with a custom font, including family, size, and weight. When tapped, it hides the current coach mark, increments the `currentHighlight` value, and then shows the coach mark again after a brief delay. The button’s appearance is customized with a background color and corner radius. The text styling is applied using a custom button text modifier.
+    ///
+    /// - Returns: A `Button` view styled with custom font properties, background color, and corner radius. The button’s action updates the coach mark visibility and highlight index with a delay.
+    private var skipButtonView: some View {
+        
+        let customNextFont = getCustomFont(customFontFamily: configuration.skipCoachMarkButtonStyle.fontFamily,
+                                           fontSize: configuration.skipCoachMarkButtonStyle.fontSize,
+                                           fontWeight: configuration.skipCoachMarkButtonStyle.fontWeight)
+        
+        return Button(action: {
+            coachMarkViewModel.skipCoachMark()
+        }) {
+            Text(configuration.skipCoachMarkButtonStyle.buttonText)
+                .filledButtonTextModifier(foregroundStyle: configuration.skipCoachMarkButtonStyle.foregroundStyle, font: customNextFont)
+        }
+        .background(configuration.skipCoachMarkButtonStyle.backgroundColor)
         .cornerRadius(10)
     }
     
