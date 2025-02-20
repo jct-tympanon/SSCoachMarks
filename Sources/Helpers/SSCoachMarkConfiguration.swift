@@ -49,11 +49,11 @@ public struct SSCoachMarkConfiguration {
                                                                fontSize: Constants.buttonsDefaultFontSize,
                                                                fontWeight: .regular)
     
-    /// The button is styled with black text, a white background, a font size of 18, and a regular font weight.
+    /// The button is styled with black text, a black background, a font size of 12, and a regular font weight.
     public var skipCoachMarkButtonStyle: SSCoachMarkButtonStyle = .init(buttonText: Constants.skipCoachMarkButtonDefaultText,
                                                                         foregroundStyle: .white,
                                                                         backgroundColor: Color.defaultColor,
-                                                                        fontSize: Constants.skipButtonDefaultFontSize,
-                                                                        fontWeight: .bold)
+                                                                        fontSize: Constants.buttonsDefaultFontSize,
+                                                                        fontWeight: .regular)
     
 }

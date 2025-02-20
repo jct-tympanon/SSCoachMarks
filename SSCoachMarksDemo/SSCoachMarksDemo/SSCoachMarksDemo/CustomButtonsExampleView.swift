@@ -45,9 +45,9 @@ struct CustomButtonsExampleView: View {
             Button(action: {
                 coachMarkViewModel.skipCoachMark()
             }) {
-                Text("Skip")
+                Image(systemName: "xmark")
                     .foregroundColor(.white)
-                    .frame(width: 50, height: 24)
+                    .frame(width: 24, height: 24)
                     .padding()
                     .background(Color("customBackgroundColor"))
                     .cornerRadius(30)

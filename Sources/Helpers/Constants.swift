@@ -51,9 +51,6 @@ struct Constants {
     /// The default font size for buttons, in points.
     static let buttonsDefaultFontSize: CGFloat = 12
     
-    /// The default font size for the skip button, in points.
-    static let skipButtonDefaultFontSize: CGFloat = 18
-    
     /// The default value for the overlay style's opacity.
     static let overlayStyleDefaultValue = 0.7
     
@@ -66,7 +63,7 @@ struct Constants {
     /// Default text for the "Done" button in the CoachMarkView.
     static let doneButtonDefaultText: String = "Done"
     
-    /// Default text for the "Skip CoachMark" button in the CoachMarkView.
-    static let skipCoachMarkButtonDefaultText: String = "Skip CoachMark"
+    /// Default text for the "Skip" button in the CoachMarkView.
+    static let skipCoachMarkButtonDefaultText: String = "Skip"
         
 }

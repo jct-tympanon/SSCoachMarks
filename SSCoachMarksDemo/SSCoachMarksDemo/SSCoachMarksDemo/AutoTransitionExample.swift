@@ -23,26 +23,7 @@ struct AutoTransitionExample: View {
             print("Finished...")
         }))
     }
-    
-    private struct skipButtonView: View {
-        
-        // MARK: - Variables
-        @ObservedObject var coachMarkViewModel: CoachMarkViewModel
-        
-        var body: some View {
-            Button(action: {
-                coachMarkViewModel.skipCoachMark()
-            }) {
-                Text("Skip")
-                    .foregroundColor(.white)
-                    .frame(width: 50, height: 24)
-                    .padding()
-                    .background(Color("customBackgroundColor"))
-                    .cornerRadius(30)
-                    .shadow(radius: 10)
-            }
-        }
-    }
+
 }
 
 #Preview {

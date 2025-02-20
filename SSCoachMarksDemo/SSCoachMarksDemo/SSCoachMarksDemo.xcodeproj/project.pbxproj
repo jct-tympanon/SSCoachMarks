@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */; };
-		125746A22C7623B300E869EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125746A12C7623B300E869EE /* Constants.swift */; };
 		129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461EE2C6CB215008BB44E /* DefaultStyleView.swift */; };
 		129461F12C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */; };
 		129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129461F22C6CB5B6008BB44E /* CommonView.swift */; };
@@ -19,18 +17,20 @@
 		12B021D32C65E0740079A38E /* SSCoachMarksDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021D22C65E0740079A38E /* SSCoachMarksDemoTests.swift */; };
 		12B021DD2C65E0740079A38E /* SSCoachMarksDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021DC2C65E0740079A38E /* SSCoachMarksDemoUITests.swift */; };
 		12B021DF2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021DE2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift */; };
-		12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */; };
-		12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */; };
-		12B021FF2C65E7E80079A38E /* SSCoachMarkTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */; };
-		12B022002C65E7E80079A38E /* SSCoachMarkOverlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */; };
-		12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F32C65E7E70079A38E /* Color+Extension.swift */; };
-		12B022022C65E7E80079A38E /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F42C65E7E70079A38E /* View+Extension.swift */; };
-		12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F62C65E7E70079A38E /* CoachMarkView.swift */; };
-		12B022042C65E7E80079A38E /* SSCoachMarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */; };
-		12B022052C65E7E80079A38E /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021F92C65E7E70079A38E /* PreferenceKey.swift */; };
-		12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FA2C65E7E70079A38E /* CommonModifier.swift */; };
-		12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FB2C65E7E70079A38E /* CommonFunctions.swift */; };
-		12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */; };
+		12CDBBCE2D0064FA00D90938 /* SSCoachMarkTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC72D0064FA00D90938 /* SSCoachMarkTextStyle.swift */; };
+		12CDBBCF2D0064FA00D90938 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBB2D0064FA00D90938 /* View+Extension.swift */; };
+		12CDBBD02D0064FA00D90938 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBF2D0064FA00D90938 /* Constants.swift */; };
+		12CDBBD12D0064FA00D90938 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBD2D0064FA00D90938 /* CommonFunctions.swift */; };
+		12CDBBD22D0064FA00D90938 /* CoachMarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC42D0064FA00D90938 /* CoachMarkModel.swift */; };
+		12CDBBD32D0064FA00D90938 /* SSCoachMarkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC52D0064FA00D90938 /* SSCoachMarkButtonStyle.swift */; };
+		12CDBBD42D0064FA00D90938 /* SSCoachMarkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC12D0064FA00D90938 /* SSCoachMarkConfiguration.swift */; };
+		12CDBBD52D0064FA00D90938 /* CommonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBE2D0064FA00D90938 /* CommonModifier.swift */; };
+		12CDBBD62D0064FA00D90938 /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */; };
+		12CDBBD72D0064FA00D90938 /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC02D0064FA00D90938 /* PreferenceKey.swift */; };
+		12CDBBD82D0064FA00D90938 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBA2D0064FA00D90938 /* Color+Extension.swift */; };
+		12CDBBD92D0064FA00D90938 /* SSCoachMarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC22D0064FA00D90938 /* SSCoachMarkManager.swift */; };
+		12CDBBDA2D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC62D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift */; };
+		12CDBBDB2D0064FA00D90938 /* CoachMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBCB2D0064FA00D90938 /* CoachMarkView.swift */; };
 		12CFB8BF2C6B413400E0B49A /* AutoTransitionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */; };
 		12CFB8C12C6B5A8E00E0B49A /* CustomButtonsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */; };
 		12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E6E2C6611D700B6970A /* EmailModel.swift */; };
@@ -56,8 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
-		125746A12C7623B300E869EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		129461EE2C6CB215008BB44E /* DefaultStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleView.swift; sourceTree = "<group>"; };
 		129461F02C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyleWithCustomizationView.swift; sourceTree = "<group>"; };
 		129461F22C6CB5B6008BB44E /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
@@ -71,18 +69,20 @@
 		12B021D82C65E0740079A38E /* SSCoachMarksDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSCoachMarksDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B021DC2C65E0740079A38E /* SSCoachMarksDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoUITests.swift; sourceTree = "<group>"; };
 		12B021DE2C65E0740079A38E /* SSCoachMarksDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarksDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkButtonStyle.swift; sourceTree = "<group>"; };
-		12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarkModel.swift; sourceTree = "<group>"; };
-		12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkTextStyle.swift; sourceTree = "<group>"; };
-		12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkOverlayStyle.swift; sourceTree = "<group>"; };
-		12B021F32C65E7E70079A38E /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
-		12B021F42C65E7E70079A38E /* View+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		12B021F62C65E7E70079A38E /* CoachMarkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoachMarkView.swift; sourceTree = "<group>"; };
-		12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkManager.swift; sourceTree = "<group>"; };
-		12B021F92C65E7E70079A38E /* PreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
-		12B021FA2C65E7E70079A38E /* CommonModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonModifier.swift; sourceTree = "<group>"; };
-		12B021FB2C65E7E70079A38E /* CommonFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
-		12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSCoachMarkConfiguration.swift; sourceTree = "<group>"; };
+		12CDBBBA2D0064FA00D90938 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		12CDBBBB2D0064FA00D90938 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		12CDBBBD2D0064FA00D90938 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		12CDBBBE2D0064FA00D90938 /* CommonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModifier.swift; sourceTree = "<group>"; };
+		12CDBBBF2D0064FA00D90938 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		12CDBBC02D0064FA00D90938 /* PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceKey.swift; sourceTree = "<group>"; };
+		12CDBBC12D0064FA00D90938 /* SSCoachMarkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkConfiguration.swift; sourceTree = "<group>"; };
+		12CDBBC22D0064FA00D90938 /* SSCoachMarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkManager.swift; sourceTree = "<group>"; };
+		12CDBBC42D0064FA00D90938 /* CoachMarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkModel.swift; sourceTree = "<group>"; };
+		12CDBBC52D0064FA00D90938 /* SSCoachMarkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkButtonStyle.swift; sourceTree = "<group>"; };
+		12CDBBC62D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkOverlayStyle.swift; sourceTree = "<group>"; };
+		12CDBBC72D0064FA00D90938 /* SSCoachMarkTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkTextStyle.swift; sourceTree = "<group>"; };
+		12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
+		12CDBBCB2D0064FA00D90938 /* CoachMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkView.swift; sourceTree = "<group>"; };
 		12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTransitionExample.swift; sourceTree = "<group>"; };
 		12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsExampleView.swift; sourceTree = "<group>"; };
 		12E58E6E2C6611D700B6970A /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
@@ -115,18 +115,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1223C3772C69EF0A0005329C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				1223C3782C69EF1B0005329C /* CoachMarkViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		12B021B52C65E0730079A38E = {
 			isa = PBXGroup;
 			children = (
-				12B021EC2C65E7E70079A38E /* Sources */,
+				12CDBBCD2D0064FA00D90938 /* Sources */,
 				12B021C02C65E0730079A38E /* SSCoachMarksDemo */,
 				12B021D12C65E0740079A38E /* SSCoachMarksDemoTests */,
 				12B021DB2C65E0740079A38E /* SSCoachMarksDemoUITests */,
@@ -188,58 +180,67 @@
 			path = SSCoachMarksDemoUITests;
 			sourceTree = "<group>";
 		};
-		12B021EC2C65E7E70079A38E /* Sources */ = {
+		12CDBBBC2D0064FA00D90938 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1223C3772C69EF0A0005329C /* ViewModel */,
-				12B021ED2C65E7E70079A38E /* Models */,
-				12B021F22C65E7E70079A38E /* Extensions */,
-				12B021F52C65E7E70079A38E /* Views */,
-				12B021F72C65E7E70079A38E /* Helpers */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		12B021ED2C65E7E70079A38E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				12B021EE2C65E7E70079A38E /* SSCoachMarkButtonStyle.swift */,
-				12B021EF2C65E7E70079A38E /* CoachMarkModel.swift */,
-				12B021F02C65E7E70079A38E /* SSCoachMarkTextStyle.swift */,
-				12B021F12C65E7E70079A38E /* SSCoachMarkOverlayStyle.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		12B021F22C65E7E70079A38E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				12B021F32C65E7E70079A38E /* Color+Extension.swift */,
-				12B021F42C65E7E70079A38E /* View+Extension.swift */,
+				12CDBBBA2D0064FA00D90938 /* Color+Extension.swift */,
+				12CDBBBB2D0064FA00D90938 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		12B021F52C65E7E70079A38E /* Views */ = {
+		12CDBBC32D0064FA00D90938 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				12B021F62C65E7E70079A38E /* CoachMarkView.swift */,
+				12CDBBBD2D0064FA00D90938 /* CommonFunctions.swift */,
+				12CDBBBE2D0064FA00D90938 /* CommonModifier.swift */,
+				12CDBBBF2D0064FA00D90938 /* Constants.swift */,
+				12CDBBC02D0064FA00D90938 /* PreferenceKey.swift */,
+				12CDBBC12D0064FA00D90938 /* SSCoachMarkConfiguration.swift */,
+				12CDBBC22D0064FA00D90938 /* SSCoachMarkManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		12CDBBC82D0064FA00D90938 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				12CDBBC42D0064FA00D90938 /* CoachMarkModel.swift */,
+				12CDBBC52D0064FA00D90938 /* SSCoachMarkButtonStyle.swift */,
+				12CDBBC62D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift */,
+				12CDBBC72D0064FA00D90938 /* SSCoachMarkTextStyle.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		12CDBBCA2D0064FA00D90938 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		12CDBBCC2D0064FA00D90938 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12CDBBCB2D0064FA00D90938 /* CoachMarkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		12B021F72C65E7E70079A38E /* Helpers */ = {
+		12CDBBCD2D0064FA00D90938 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				125746A12C7623B300E869EE /* Constants.swift */,
-				12B021F82C65E7E70079A38E /* SSCoachMarkManager.swift */,
-				12B021F92C65E7E70079A38E /* PreferenceKey.swift */,
-				12B021FA2C65E7E70079A38E /* CommonModifier.swift */,
-				12B021FB2C65E7E70079A38E /* CommonFunctions.swift */,
-				12B021FC2C65E7E70079A38E /* SSCoachMarkConfiguration.swift */,
+				12CDBBBC2D0064FA00D90938 /* Extensions */,
+				12CDBBC32D0064FA00D90938 /* Helpers */,
+				12CDBBC82D0064FA00D90938 /* Models */,
+				12CDBBCA2D0064FA00D90938 /* ViewModel */,
+				12CDBBCC2D0064FA00D90938 /* Views */,
 			);
-			path = Helpers;
-			sourceTree = "<group>";
+			name = Sources;
+			path = /Users/yagnik/Downloads/Documents/Projects/SSCoachMarks/Sources;
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -371,30 +372,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12B022002C65E7E80079A38E /* SSCoachMarkOverlayStyle.swift in Sources */,
-				12B022052C65E7E80079A38E /* PreferenceKey.swift in Sources */,
+				12CDBBCE2D0064FA00D90938 /* SSCoachMarkTextStyle.swift in Sources */,
+				12CDBBCF2D0064FA00D90938 /* View+Extension.swift in Sources */,
+				12CDBBD02D0064FA00D90938 /* Constants.swift in Sources */,
+				12CDBBD12D0064FA00D90938 /* CommonFunctions.swift in Sources */,
+				12CDBBD22D0064FA00D90938 /* CoachMarkModel.swift in Sources */,
+				12CDBBD32D0064FA00D90938 /* SSCoachMarkButtonStyle.swift in Sources */,
+				12CDBBD42D0064FA00D90938 /* SSCoachMarkConfiguration.swift in Sources */,
+				12CDBBD52D0064FA00D90938 /* CommonModifier.swift in Sources */,
+				12CDBBD62D0064FA00D90938 /* CoachMarkViewModel.swift in Sources */,
+				12CDBBD72D0064FA00D90938 /* PreferenceKey.swift in Sources */,
+				12CDBBD82D0064FA00D90938 /* Color+Extension.swift in Sources */,
+				12CDBBD92D0064FA00D90938 /* SSCoachMarkManager.swift in Sources */,
+				12CDBBDA2D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift in Sources */,
+				12CDBBDB2D0064FA00D90938 /* CoachMarkView.swift in Sources */,
 				12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */,
-				12B022032C65E7E80079A38E /* CoachMarkView.swift in Sources */,
 				129461F12C6CB393008BB44E /* DefaultStyleWithCustomizationView.swift in Sources */,
-				12B022012C65E7E80079A38E /* Color+Extension.swift in Sources */,
-				12B022022C65E7E80079A38E /* View+Extension.swift in Sources */,
 				12CFB8C12C6B5A8E00E0B49A /* CustomButtonsExampleView.swift in Sources */,
-				1223C3792C69EF1B0005329C /* CoachMarkViewModel.swift in Sources */,
 				12CFB8BF2C6B413400E0B49A /* AutoTransitionExample.swift in Sources */,
-				12B021FD2C65E7E80079A38E /* SSCoachMarkButtonStyle.swift in Sources */,
-				12B022082C65E7E80079A38E /* SSCoachMarkConfiguration.swift in Sources */,
-				12B021FE2C65E7E80079A38E /* CoachMarkModel.swift in Sources */,
-				12B021FF2C65E7E80079A38E /* SSCoachMarkTextStyle.swift in Sources */,
 				12E58E732C66129800B6970A /* EmailRow.swift in Sources */,
 				12B021C42C65E0730079A38E /* ContentView.swift in Sources */,
 				12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */,
-				12B022072C65E7E80079A38E /* CommonFunctions.swift in Sources */,
 				129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */,
-				12B022042C65E7E80079A38E /* SSCoachMarkManager.swift in Sources */,
 				129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */,
-				12B022062C65E7E80079A38E /* CommonModifier.swift in Sources */,
 				12E58E712C66127600B6970A /* SearchTextField.swift in Sources */,
-				125746A22C7623B300E869EE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
