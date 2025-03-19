@@ -25,7 +25,6 @@
 		12CDBBD32D0064FA00D90938 /* SSCoachMarkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC52D0064FA00D90938 /* SSCoachMarkButtonStyle.swift */; };
 		12CDBBD42D0064FA00D90938 /* SSCoachMarkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC12D0064FA00D90938 /* SSCoachMarkConfiguration.swift */; };
 		12CDBBD52D0064FA00D90938 /* CommonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBE2D0064FA00D90938 /* CommonModifier.swift */; };
-		12CDBBD62D0064FA00D90938 /* CoachMarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */; };
 		12CDBBD72D0064FA00D90938 /* PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC02D0064FA00D90938 /* PreferenceKey.swift */; };
 		12CDBBD82D0064FA00D90938 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBBA2D0064FA00D90938 /* Color+Extension.swift */; };
 		12CDBBD92D0064FA00D90938 /* SSCoachMarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBC22D0064FA00D90938 /* SSCoachMarkManager.swift */; };
@@ -33,6 +32,7 @@
 		12CDBBDB2D0064FA00D90938 /* CoachMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CDBBCB2D0064FA00D90938 /* CoachMarkView.swift */; };
 		12CFB8BF2C6B413400E0B49A /* AutoTransitionExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */; };
 		12CFB8C12C6B5A8E00E0B49A /* CustomButtonsExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */; };
+		12DEBD8D2D7EE11E0015CF2E /* ButtonEventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DEBD8C2D7EE11E0015CF2E /* ButtonEventsCoordinator.swift */; };
 		12E58E6F2C6611D700B6970A /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E6E2C6611D700B6970A /* EmailModel.swift */; };
 		12E58E712C66127600B6970A /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E702C66127600B6970A /* SearchTextField.swift */; };
 		12E58E732C66129800B6970A /* EmailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E58E722C66129800B6970A /* EmailRow.swift */; };
@@ -81,10 +81,10 @@
 		12CDBBC52D0064FA00D90938 /* SSCoachMarkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkButtonStyle.swift; sourceTree = "<group>"; };
 		12CDBBC62D0064FA00D90938 /* SSCoachMarkOverlayStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkOverlayStyle.swift; sourceTree = "<group>"; };
 		12CDBBC72D0064FA00D90938 /* SSCoachMarkTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSCoachMarkTextStyle.swift; sourceTree = "<group>"; };
-		12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkViewModel.swift; sourceTree = "<group>"; };
 		12CDBBCB2D0064FA00D90938 /* CoachMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachMarkView.swift; sourceTree = "<group>"; };
 		12CFB8BE2C6B413200E0B49A /* AutoTransitionExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTransitionExample.swift; sourceTree = "<group>"; };
 		12CFB8C02C6B5A8D00E0B49A /* CustomButtonsExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonsExampleView.swift; sourceTree = "<group>"; };
+		12DEBD8C2D7EE11E0015CF2E /* ButtonEventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEventsCoordinator.swift; sourceTree = "<group>"; };
 		12E58E6E2C6611D700B6970A /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
 		12E58E702C66127600B6970A /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		12E58E722C66129800B6970A /* EmailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRow.swift; sourceTree = "<group>"; };
@@ -192,6 +192,7 @@
 		12CDBBC32D0064FA00D90938 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				12DEBD8C2D7EE11E0015CF2E /* ButtonEventsCoordinator.swift */,
 				12CDBBBD2D0064FA00D90938 /* CommonFunctions.swift */,
 				12CDBBBE2D0064FA00D90938 /* CommonModifier.swift */,
 				12CDBBBF2D0064FA00D90938 /* Constants.swift */,
@@ -213,14 +214,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		12CDBBCA2D0064FA00D90938 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				12CDBBC92D0064FA00D90938 /* CoachMarkViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		12CDBBCC2D0064FA00D90938 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +228,6 @@
 				12CDBBBC2D0064FA00D90938 /* Extensions */,
 				12CDBBC32D0064FA00D90938 /* Helpers */,
 				12CDBBC82D0064FA00D90938 /* Models */,
-				12CDBBCA2D0064FA00D90938 /* ViewModel */,
 				12CDBBCC2D0064FA00D90938 /* Views */,
 			);
 			name = Sources;
@@ -380,7 +372,6 @@
 				12CDBBD32D0064FA00D90938 /* SSCoachMarkButtonStyle.swift in Sources */,
 				12CDBBD42D0064FA00D90938 /* SSCoachMarkConfiguration.swift in Sources */,
 				12CDBBD52D0064FA00D90938 /* CommonModifier.swift in Sources */,
-				12CDBBD62D0064FA00D90938 /* CoachMarkViewModel.swift in Sources */,
 				12CDBBD72D0064FA00D90938 /* PreferenceKey.swift in Sources */,
 				12CDBBD82D0064FA00D90938 /* Color+Extension.swift in Sources */,
 				12CDBBD92D0064FA00D90938 /* SSCoachMarkManager.swift in Sources */,
@@ -394,6 +385,7 @@
 				12B021C42C65E0730079A38E /* ContentView.swift in Sources */,
 				12B021C22C65E0730079A38E /* SSCoachMarksDemoApp.swift in Sources */,
 				129461F32C6CB5B6008BB44E /* CommonView.swift in Sources */,
+				12DEBD8D2D7EE11E0015CF2E /* ButtonEventsCoordinator.swift in Sources */,
 				129461EF2C6CB215008BB44E /* DefaultStyleView.swift in Sources */,
 				12E58E712C66127600B6970A /* SearchTextField.swift in Sources */,
 			);
