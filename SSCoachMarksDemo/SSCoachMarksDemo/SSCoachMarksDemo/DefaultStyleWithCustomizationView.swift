@@ -10,17 +10,13 @@ import SwiftUI
 struct DefaultStyleWithCustomizationView: View {
     
     // MARK: - Variables
-    @StateObject var coachMarkViewModel = CoachMarkViewModel()
     
     var body: some View {
         commonView
         // This modifier needs to be added to the main parent view to start the coach mark sequence.
-        .modifier(CoachMarkView(isShowCoachMark: true,
-                                isAutoTransition: false,
-                                coachMarkViewModel: coachMarkViewModel,
-                                onCoachMarkFinished: {
-            print("Finished...")
-        })
+            .modifier(CoachMarkView(onCoachMarkFinished: {
+                print("Finished...")
+            })
             .coachMarkTitleViewStyle(foregroundStyle: .blue, fontSize: 14, fontWeight: .bold)
             .coachMarkDescriptionViewStyle(foregroundStyle: .pink, fontSize: 14, fontWeight: .bold)
             .overlayStyle(overlayColor: .black, overlayOpacity: 0.5)
