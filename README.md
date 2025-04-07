@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/blob/feature/update_readme/Assets/SSCoachMarks.png" width="100%" height="100%"/>
+<img src="Assets/SSCoachMarks.png" width="100%" height="100%"/>
 </p>
 
 # SSCoachMarks
@@ -127,7 +127,7 @@ When using Xcode 15 or later, you can install `SSCoachMarks` by going to your Pr
 # Demo Videos
 | Default Style | Default Style With Customisation | Auto Transition | Custom Buttons |
 | :--: | :-----: | :--: | :--: |
-| <img width=260px src="https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/blob/feature/update_readme/Assets/Default_Style.gif" /> | <img width=260px src="https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/blob/feature/update_readme/Assets/Default_Style_With_Customization.gif" /> | <img width=260px src="https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/blob/feature/update_readme/Assets/Auto_Transition.gif" /> | <img width=260px src="https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/blob/feature/update_readme/Assets/Custom_Buttons.gif" /> |
+| <img width=260px src="Assets/Default_Style.gif" /> | <img width=260px src="Assets/Default_Style_With_Customization.gif" /> | <img width=260px src="Assets/Auto_Transition.gif" /> | <img width=260px src="Assets/Custom_Buttons.gif" /> |
 
 
 ## How to Contribute 🤝 
