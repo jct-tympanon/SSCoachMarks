@@ -5,6 +5,7 @@
 # SSCoachMarks
 
 ![SPM Compatible-badge](https://img.shields.io/badge/Swift_Package_Manager-compatible-coolgreen)
+[![swiftUI](https://img.shields.io/badge/-swiftUI-blue)](https://developer.apple.com/documentation/swiftui)
 [![Version](https://img.shields.io/cocoapods/v/SSCoachMarks.svg?style=flat)](https://cocoapods.org/pods/SSCoachMarks)
 [![License](https://img.shields.io/cocoapods/l/SSCoachMarks.svg?style=flat)](https://cocoapods.org/pods/SSCoachMarks)
 [![PRs Welcome][PR-image]][PR-url]
@@ -39,7 +40,7 @@ pod 'SSCoachMarks'
 When using Xcode 15 or later, you can install `SSCoachMarks` by going to your Project settings > `Swift Packages` and add the repository by providing the GitHub URL. Alternatively, you can go to `File` > `Add Package Dependencies...`
 
          dependencies: [
-             .package(url: "https://github.com/SimformSolutionsPvtLtd/SSCoachMarks.git", from: "2.0.0")
+             .package(url: "https://github.com/SimformSolutionsPvtLtd/SSCoachMarks.git", from: "1.0.0")
          ]
 
 ## Usage example
@@ -154,7 +155,7 @@ For bugs, feature feature requests, and discussion use [GitHub Issues](https://g
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 [PR-image]:https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat
-[PR-url]:http://makeapullrequest.com
+[PR-url]:https://github.com/SimformSolutionsPvtLtd/SSCoachMarks/pulls
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [Swift Compatibility-badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FSimformSolutionsPvtLtd%2FSSCoachMarks%2Fbadge%3Ftype%3Dswift-versions
