@@ -528,7 +528,7 @@ struct CoachMarkView: ViewModifier {
     }
 }
 
-@available(macOS 15.0, *)
+@available(macOS 14.0, *)
 // MARK: - Modifiers
 extension CoachMarkView {
     
