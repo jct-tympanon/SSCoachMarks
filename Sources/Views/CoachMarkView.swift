@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(macOS 14.0, *)
 // MARK: CoachMarkView
-struct CoachMarkView: ViewModifier {
+public struct CoachMarkView: ViewModifier {
     
     // MARK: - Variables
     
@@ -23,7 +23,7 @@ struct CoachMarkView: ViewModifier {
     public var autoTransitionDuration: Double = Constants.defaultAutoTransitionDuration
     
     /// An instance of `SSCoachMarkManager` that manages the CoachMark configuration and behaviour.
-    public var coachMarkManager: SSCoachMarkManager = SSCoachMarkManager()
+    var coachMarkManager: SSCoachMarkManager = SSCoachMarkManager()
     
     /// A computed property that provides direct access to the `SSCoachMarkConfiguration` from `coachMarkManager`.
     /// - The `get` method returns the current configuration from `coachMarkManager`.
@@ -38,7 +38,7 @@ struct CoachMarkView: ViewModifier {
     }
     
     /// This property can be used to subscribe to button event publishers and trigger events dynamically.
-    public var buttonEventsCoordinator = ButtonEventsCoordinator()
+    var buttonEventsCoordinator = ButtonEventsCoordinator()
 
     /// This property allows you to customize the appearance and behaviour of the "Skip" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
     public var skipCoachMarkButton: AnyView?
@@ -73,7 +73,7 @@ struct CoachMarkView: ViewModifier {
     /// The height of the text description within the coach mark, used for layout purposes.
     @State private var descriptionTextHeight: CGFloat = 0
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .onPreferenceChange(HighlightAnchorKey.self) { value in
                 highlightOrder = Array(value.keys).sorted()
