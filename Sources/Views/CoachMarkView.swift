@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(macOS 15.0, *)
+@available(macOS 14.0, *)
 // MARK: CoachMarkView
 struct CoachMarkView: ViewModifier {
     
@@ -136,7 +136,7 @@ struct CoachMarkView: ViewModifier {
                     }
                 }
                 .modify {
-                    if #available(iOS 17.0, macOS 14.0, *) {
+                    if #available(iOS 17.0, *) {
                         $0.onChange(of: currentHighlight) { _, _ in
                             if isAutoTransition {
                                 startTimer()

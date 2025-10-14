@@ -10,7 +10,7 @@ import Foundation
 //MARK: - SSCoachMarkManager
 /// Manages the configuration and behaviour of CoachMark components.
 /// This class provides direct access to the configuration and facilitates the setup and customisation of CoachMark views.
-@available(macOS 15.0, *)
+@available(macOS 14.0, *)
 final class SSCoachMarkManager {
     
     /// The configuration used to style and control the behaviour of the CoachMark.

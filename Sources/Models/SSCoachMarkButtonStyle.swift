@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - SSCoachMarkButtonStyle
 /// A style configuration for a button used in the CoachMarkView.
 /// This struct defines various visual aspects of the button, such as text, colors, and font attributes.
-@available(macOS 15.0, *)
+@available(macOS 14.0, *)
 public struct SSCoachMarkButtonStyle {
     
     // MARK: - Variables
