@@ -14,16 +14,16 @@ public struct CoachMarkView: ViewModifier {
     // MARK: - Variables
     
     /// A boolean indicating whether the coach mark should be shown. Default is true.
-    public var isShowCoachMark: Bool = true
+    public var isShowCoachMark: Bool
     
     /// A boolean indicating whether the coach mark transitions should occur automatically. Default is false. 
-    public var isAutoTransition: Bool = false
+    public var isAutoTransition: Bool
     
     /// The duration (in seconds) for each automatic transition between coach marks. Default is 2.0 sec.
-    public var autoTransitionDuration: Double = Constants.defaultAutoTransitionDuration
+    public var autoTransitionDuration: Double
     
     /// An instance of `SSCoachMarkManager` that manages the CoachMark configuration and behaviour.
-    var coachMarkManager: SSCoachMarkManager = SSCoachMarkManager()
+    var coachMarkManager: SSCoachMarkManager
     
     /// A computed property that provides direct access to the `SSCoachMarkConfiguration` from `coachMarkManager`.
     /// - The `get` method returns the current configuration from `coachMarkManager`.
@@ -38,7 +38,7 @@ public struct CoachMarkView: ViewModifier {
     }
     
     /// This property can be used to subscribe to button event publishers and trigger events dynamically.
-    var buttonEventsCoordinator = ButtonEventsCoordinator()
+    var buttonEventsCoordinator: ButtonEventsCoordinator
 
     /// This property allows you to customize the appearance and behaviour of the "Skip" button by assigning any SwiftUI view to it. If `nil`, the default implementation will be used.
     public var skipCoachMarkButton: AnyView?
@@ -56,23 +56,57 @@ public struct CoachMarkView: ViewModifier {
     public var onCoachMarkFinished: () -> ()
     
     /// A Boolean value that determines whether the Coach Mark should be shown. Defaults to `false`.
-    @State var showCoachMark: Bool = false
+    @State var showCoachMark: Bool
     
     /// An integer value representing the index of the currently highlighted item in the Coach Mark sequence. Defaults to `0`.
-    @State var currentHighlight: Int = 0
+    @State var currentHighlight: Int
     
     /// A Boolean value that determines whether the Coach Mark should be hidden automatically. Defaults to `true`.
-    @State var hideCoachMark: Bool = true
+    @State var hideCoachMark: Bool
     
     /// An array of integers representing the order in which highlights are displayed.
-    @State private var highlightOrder: [Int] = []
+    @State private var highlightOrder: [Int]
     
     /// A timer that can be used to control the duration and interval of automatic transitions between coach marks.
     @State private var timer: Timer?
     
     /// The height of the text description within the coach mark, used for layout purposes.
-    @State private var descriptionTextHeight: CGFloat = 0
-
+    @State private var descriptionTextHeight: CGFloat
+    
+    public init(
+        isShowCoachMark: Bool = true,
+        isAutoTransition: Bool = false,
+        autoTransitionDuration: Double = 2.0,
+        skipCoachMarkButton: AnyView? = nil,
+        nextButtonContent: AnyView? = nil,
+        backButtonContent: AnyView? = nil,
+        doneButtonContent: AnyView? = nil,
+        onCoachMarkFinished: @escaping () -> Void = {},
+        showCoachMark: Bool = false,
+        currentHighlight: Int = 0,
+        hideCoachMark: Bool = true,
+        highlightOrder: [Int] = [],
+        timer: Timer? = nil,
+        descriptionTextHeight: CGFloat = 0
+    ) {
+        self.isShowCoachMark = isShowCoachMark
+        self.isAutoTransition = isAutoTransition
+        self.autoTransitionDuration = autoTransitionDuration
+        self.coachMarkManager = SSCoachMarkManager()
+        self.buttonEventsCoordinator = ButtonEventsCoordinator()
+        self.skipCoachMarkButton = skipCoachMarkButton
+        self.nextButtonContent = nextButtonContent
+        self.backButtonContent = backButtonContent
+        self.doneButtonContent = doneButtonContent
+        self.onCoachMarkFinished = onCoachMarkFinished
+        self.showCoachMark = showCoachMark
+        self.currentHighlight = currentHighlight
+        self.hideCoachMark = hideCoachMark
+        self.highlightOrder = highlightOrder
+        self.timer = timer
+        self.descriptionTextHeight = descriptionTextHeight
+    }
+    
     public func body(content: Content) -> some View {
         content
             .onPreferenceChange(HighlightAnchorKey.self) { value in
