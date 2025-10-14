@@ -28,6 +28,7 @@ func updateAfterDelay(delay: TimeInterval, updateAction: @escaping () -> Void) {
 ///   - fontWeight: The weight of the font.
 ///   
 /// - Returns: A `Font` instance configured with the specified properties. If a custom font family is provided and is not empty, it returns a custom font with the specified family, size, and weight. Otherwise, it returns a system font with the specified size and weight.
+@available(macOS 11.0, *)
 func getCustomFont(customFontFamily: String?, fontSize: CGFloat, fontWeight: Font.Weight) -> Font {
     if let fontFamily = customFontFamily, !fontFamily.isEmpty {
         return .custom(fontFamily, fixedSize: fontSize).weight(fontWeight)

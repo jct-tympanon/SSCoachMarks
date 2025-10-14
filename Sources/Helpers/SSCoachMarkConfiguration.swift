@@ -10,6 +10,7 @@ import SwiftUI
 // MARK: - SSCoachMarkConfiguration
 /// A configuration structure for customising the appearance and behaviour of the CoachMarkView.
 /// This struct allows you to define the styles for text, buttons, and the overlay in the CoachMark.
+@available(macOS 15.0, *)
 public struct SSCoachMarkConfiguration {
     
     // MARK: - Text, Colors and fonts

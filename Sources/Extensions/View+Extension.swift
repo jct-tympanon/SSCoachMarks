@@ -98,6 +98,7 @@ extension View {
     }
 }
 
+@available(macOS 12.0, *)
 extension View {
     
     /// Applies a reverse mask to the view, revealing the shape of the provided content.
@@ -122,6 +123,7 @@ extension View {
     
 }
 
+@available(macOS 12.0, *)
 extension View {
     
     /// Applies a modifier to style text as filled button text.
@@ -150,6 +152,7 @@ extension View {
     }
 }
 
+#if os(iOS)
 extension UIView {
     
     /// Recursively searches through the view's subviews to find and return the content view of a UIVisualEffectView, identified by the class name "_UIVisualEffectContentView".
@@ -169,7 +172,7 @@ extension UIView {
         return nil
     }
 }
-
+#endif
 
 extension View {
     

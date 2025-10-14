@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(macOS 15.0, *)
 // MARK: CoachMarkView
 struct CoachMarkView: ViewModifier {
     
@@ -135,7 +136,7 @@ struct CoachMarkView: ViewModifier {
                     }
                 }
                 .modify {
-                    if #available(iOS 17.0, *) {
+                    if #available(iOS 17.0, macOS 14.0, *) {
                         $0.onChange(of: currentHighlight) { _, _ in
                             if isAutoTransition {
                                 startTimer()
@@ -162,19 +163,7 @@ struct CoachMarkView: ViewModifier {
                     let popoverContent = {
                         popover(highlight: highlight, highlightRect: highlightRect)
                             .onAppear {
-                                DispatchQueue.main.async {
-                                    if let keyWindow = UIApplication.shared.connectedScenes
-                                        .compactMap({ $0 as? UIWindowScene })
-                                        .flatMap({ $0.windows })
-                                        .first(where: { $0.isKeyWindow }) {
-                                        
-                                        if let uiVisualEffectContentView = keyWindow.findUIVisualEffectContentView() {
-                                            uiVisualEffectContentView.backgroundColor = UIColor(highlight.coachMarkBackGroundColor)
-                                        } else {
-                                            print("uiVisualEffectContentView view not found")
-                                        }
-                                    }
-                                }
+                                dimForegroundWindow(highlight: highlight)
                             }
                     }
                     
@@ -189,6 +178,37 @@ struct CoachMarkView: ViewModifier {
                     }
                 }
         }
+    }
+    
+    private func dimForegroundWindow(highlight: Highlight) {
+        DispatchQueue.main.async {
+            #if os(iOS)
+            if let keyWindow = UIApplication.shared.connectedScenes
+                .compactMap({ $0 as? UIWindowScene })
+                .flatMap({ $0.windows })
+                .first(where: { $0.isKeyWindow }) {
+                
+                if let uiVisualEffectContentView = keyWindow.findUIVisualEffectContentView() {
+                    uiVisualEffectContentView.backgroundColor = UIColor(highlight.coachMarkBackGroundColor)
+                } else {
+                    print("uiVisualEffectContentView view not found")
+                }
+            }
+            #elseif os(macOS)
+            #endif
+        }
+    }
+    
+    private func screenBounds() -> CGSize {
+        #if os(iOS)
+        return UIScreen.main.bounds
+        #elseif os(macOS)
+        if let screen = NSScreen.main {
+            return screen.frame.size
+        } else {
+            return CGSize(width: 0, height: 0)
+        }
+        #endif
     }
     
     /// Starts a timer to handle automatic transitions between coach marks.
@@ -232,12 +252,13 @@ struct CoachMarkView: ViewModifier {
                         .padding(.top, highlight.title == nil ? 0 : 20)
                         .foregroundStyle(configuration.coachMarkTitleViewStyle.foregroundStyle)
                     
-                    if descriptionTextHeight > UIScreen.main.bounds.height - highlightRect.maxY - Constants.scrollViewOffset || descriptionTextHeight > UIScreen.main.bounds.height {
+                    let bounds = screenBounds()
+                    if descriptionTextHeight > bounds.height - highlightRect.maxY - Constants.scrollViewOffset || descriptionTextHeight > bounds.height {
                         ScrollView {
                             coachMarkDescriptionView(description: description)
                         }
                     } else {
-                        if descriptionTextHeight >= highlightRect.maxY && descriptionTextHeight > UIScreen.main.bounds.height {
+                        if descriptionTextHeight >= highlightRect.maxY && descriptionTextHeight > bounds.height {
                             ScrollView {
                                 coachMarkDescriptionView(description: description)
                             }
@@ -507,6 +528,7 @@ struct CoachMarkView: ViewModifier {
     }
 }
 
+@available(macOS 15.0, *)
 // MARK: - Modifiers
 extension CoachMarkView {
     
